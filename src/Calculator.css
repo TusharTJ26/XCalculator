@@ -1,0 +1,8 @@
+.calculatorButton{
+    width: 20%;
+    height: 3rem;
+    padding: 1rem;
+    text-align: center;
+    border: solid black 2px;
+    border-radius: 5px;
+}
