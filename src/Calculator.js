@@ -53,6 +53,7 @@ export default function Calculator() {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        autoFocus
       />
       {result != "0" ? <div>{result}</div> : null}
       <div
