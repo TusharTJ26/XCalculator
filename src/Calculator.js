@@ -22,12 +22,16 @@ export default function Calculator() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState(0);
   const calculateExpression = () => {
-    try {
-      const result = eval(input);
-      setResult(result);
-      //   return eval(input); // e.g., "4 + 5 * (6 - 2)"
-    } catch (error) {
-      return "Invalid expression";
+    if (input.length == 0) {
+      setResult("Error");
+    } else {
+      try {
+        const result = eval(input);
+        setResult(result);
+        //   return eval(input); // e.g., "4 + 5 * (6 - 2)"
+      } catch (error) {
+        return "Invalid expression";
+      }
     }
   };
 
